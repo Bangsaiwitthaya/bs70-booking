@@ -150,8 +150,7 @@ function updateCountdown(){
   $('cdMinutes').textContent=String(minutes).padStart(2,'0');
   $('cdSeconds').textContent=String(seconds).padStart(2,'0');
   $('countdownTitle').textContent=title;
-  // แยกกำหนดการจากสถานะเปิดจองจริงที่ควบคุมโดยแอดมิน
-  $('countdownFoot').textContent=foot+';
+  $('countdownFoot').textContent=foot;
 }
 updateCountdown();
 window.setInterval(updateCountdown,1000);
