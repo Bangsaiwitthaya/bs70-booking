@@ -1,0 +1,83 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>จองโต๊ะคืนสู่เหย้า ชาวบางไทรวิทย์ 2570</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{font-family:Sarabun,Tahoma,sans-serif;color:#17304f;background:#eff4fc}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{border:0;background:#194985;color:#fff;border-radius:11px;padding:11px 15px;font-weight:800;cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}.alt{background:#e5edfa;color:#194985}.wrap{max-width:1100px;margin:auto;padding:12px}.head{background:linear-gradient(120deg,#071c4b,#1c5296);color:white;border-bottom:5px solid #d2a448;padding:23px 15px;text-align:center}.head h1{font-size:clamp(21px,4vw,33px);color:#ffe4a0;margin:0}.head p{margin:5px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:13px 0}.tabs button{flex:1;background:white;color:#214477;border:1px solid #cbd7e9}.tabs button.active{background:#194985;color:white}.card{background:#fff;border:1px solid #dce6f3;border-radius:17px;padding:16px;margin:12px 0;box-shadow:0 7px 22px #1028470a}h2{margin:0 0 12px;font-size:20px}label{display:block;font-weight:800;margin:10px 0 4px}input{width:100%;border:1px solid #ccd7e6;border-radius:10px;padding:12px;min-width:0}.grid{display:grid;gap:8px}.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.row{display:flex;justify-content:space-between;align-items:center;gap:9px;flex-wrap:wrap}.hidden{display:none!important}.muted{color:#61748c;font-size:13px}.notice{border-radius:14px;padding:14px;margin:10px 0;font-weight:800}.notice.blue{background:#dbebff;color:#103e7c;border:2px solid #8cb8f2}.notice.red{background:#fff0ed;color:#a1212d;border:2px solid #f3a7a7}.stage{background:#0b316f;color:white;text-align:center;padding:14px;border-radius:10px;margin:8px 0;font-weight:800}.musicians{display:flex;justify-content:center;gap:9px;margin-bottom:7px}.musicians span{border:1px solid #8dadd8;background:#dceaff;color:#204d83;border-radius:9px;padding:6px 8px;font-size:12px;font-weight:800}.mapOuter{overflow-x:auto}.map{display:grid;gap:4px;min-width:0}.seat{min-width:0;aspect-ratio:1/1.08;padding:2px 1px;border:1px solid #a3ccbc;background:#ebfaf2;color:#176045;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:clamp(8px,1.8vw,13px);font-weight:800}.seat small{display:block;max-width:100%;font-size:clamp(5px,1vw,10px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.seat.selected{background:#e0edff;color:#114ca5;border:2px solid #3479d4}.seat.pending,.seat.review{background:#fff0d6;color:#8f591c}.seat.paid{background:#e8ebef;color:#5b687a}.seat.vip{background:#fff0b7;color:#7a5510;border-color:#dab55a;overflow:hidden}.aisle{background:#e7edf7;border-left:1px dashed #9aacc5;border-right:1px dashed #9aacc5;border-radius:4px;display:grid;place-items:center;font-size:clamp(6px,1vw,10px);writing-mode:vertical-rl;color:#526a8b}.actions{display:flex;gap:10px;flex-wrap:wrap}.actions button{flex:1}.summary{background:#f2f7ff;padding:13px;border-radius:12px}.tag{display:inline-block;padding:3px 8px;background:#e6f0ff;border-radius:15px;margin:3px}.message{padding:12px;border-radius:12px;background:#fff3d6;color:#624a0a;margin:12px 0}.err{background:#ffeaeb;color:#951d2a}.good{background:#e1f8ea;color:#126c3a}.bookingItem{border-bottom:1px solid #e4eaf3;padding:12px 0}.tableChecks{display:flex;flex-wrap:wrap;gap:8px}.tableChecks label{background:#eff5ff;border:1px solid #b8cbea;padding:9px;border-radius:9px;margin:0}input[type=checkbox]{width:auto;margin-right:5px}.bank{background:#fff6dc;border-radius:10px;padding:12px;margin:10px 0}.footer{text-align:center;color:#657891;padding:25px 8px}@media(max-width:600px){.wrap{padding:8px}.card{padding:12px}.map{gap:2px}.seat{border-radius:4px}.musicians span{font-size:9px;padding:5px}}
+</style></head><body>
+<header class="head"><h1>คืนสู่เหย้า ชาวบางไทรวิทย์ 2570</h1><p id="eventInfo">13 กุมภาพันธ์ 2570 • 17.30 น. • สนามกีฬาโรงเรียนบางไทรวิทยา</p></header>
+<div class="wrap"><div class="notice blue">👥 10 ท่าน / โต๊ะ — นั่งร่วมงานได้โต๊ะละ 10 คน</div><div class="notice red">🚫🍺 ไม่มีเครื่องดื่มแอลกอฮอล์ภายในงาน</div>
+<div id="error" class="message err hidden" role="alert"></div><nav class="tabs"><button id="nav-book" class="active" onclick="nav('book')">🪑 จองโต๊ะ</button><button id="nav-check" onclick="nav('check')">📋 ตรวจสอบ / ส่งสลิป</button></nav>
+<section id="tab-book"><div id="step1"><div class="card"><div class="row"><h2>ขั้นตอนที่ 1 — เลือกโต๊ะ</h2><button class="alt" onclick="loadMap()">↻ รีเฟรชผัง</button></div><div class="muted" id="mapStatus">กำลังโหลดผังโต๊ะล่าสุด...</div><div class="musicians"><span>🎵 นักดนตรี 1</span><span>🎵 นักดนตรี 2</span><span>🎵 นักดนตรี 3</span></div><div class="stage">🎤 เวทีการแสดง</div><div class="mapOuter"><div id="map" class="map"></div></div><p class="muted">สีเขียว = ว่าง • สีน้ำเงิน = เลือกแล้ว • สีเหลือง = รอชำระ • สีเทา = ชำระแล้ว • สีทอง = โต๊ะพิเศษ</p></div><div class="card row"><strong id="selection">ยังไม่ได้เลือกโต๊ะ</strong><button id="next" onclick="nextStep()" disabled>ถัดไป →</button></div></div>
+<div id="step2" class="hidden"><div class="card"><h2>ขั้นตอนที่ 2 — ยืนยันรายละเอียด</h2><div id="summary" class="summary"></div><label for="name">ชื่อ–นามสกุลผู้จอง *</label><input id="name" autocomplete="name" maxlength="100"><label for="phone">เบอร์โทรศัพท์ 10 หลัก *</label><input id="phone" inputmode="tel" maxlength="10" autocomplete="tel" placeholder="08XXXXXXXX"><label for="group">ชื่อโต๊ะ * (ชื่อรุ่น / ชื่อกลุ่ม / ชื่อผู้จอง)</label><input id="group" maxlength="90" placeholder="เช่น รุ่น 2545 หรือ กลุ่มเพื่อนสมชาย"><div class="actions" style="margin-top:16px"><button class="alt" onclick="backStep()">← ย้อนกลับ</button><button id="confirm" onclick="confirmBook()">ยืนยันการจอง</button></div></div></div>
+<div id="success" class="card hidden"></div></section>
+<section id="tab-check" class="hidden"><div class="card"><h2>ค้นหารายการจอง</h2><label for="lookupPhone">เบอร์โทรศัพท์ที่ใช้จอง</label><div class="row"><input style="flex:1" id="lookupPhone" inputmode="tel" maxlength="10" placeholder="08XXXXXXXX"><button onclick="lookup()">ค้นหา</button></div><div id="found"></div></div><div class="card hidden" id="bookingDetail"><h2>รายละเอียดการจอง / แจ้งชำระเงิน</h2><div id="detail"></div><div class="bank" id="bank"></div><h3>เลือกโต๊ะที่ชำระด้วยสลิปนี้</h3><div id="payTables" class="tableChecks"></div><label for="slip">รูปสลิป JPG / PNG / WEBP (ไม่เกิน 5 MB)</label><input id="slip" type="file" accept="image/jpeg,image/png,image/webp"><div class="actions" style="margin-top:12px"><button onclick="sendSlip()">📤 ส่งสลิปให้เจ้าหน้าที่ตรวจ</button></div><p class="muted">รองรับชำระเป็นรายโต๊ะ การชำระจะมีผลหลังเจ้าหน้าที่อนุมัติเท่านั้น</p></div></section>
+<p class="footer">ระบบจองโต๊ะสมาคมศิษย์เก่าโรงเรียนบางไทรวิทยา — ข้อมูลใช้ร่วมกับ Google Apps Script</p></div>
+<script src="config.js"></script><script>
+'use strict';
+const $=id=>document.getElementById(id),selected=new Set();let publicState=null,currentBooking=null,submitted=false;
+const esc=s=>String(s??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]));
+const currency=n=>Number(n||0).toLocaleString('th-TH');
+function msg(text,kind='err'){const el=$('error');if(!text){el.classList.add('hidden');return;}el.textContent=text;el.className='message '+kind;window.scrollTo({top:0,behavior:'smooth'});}
+let loading=false;
+async function api(action,data={}){
+ if(!window.BS70_API_URL || window.BS70_API_URL.includes('REPLACE-'))throw Error('ยังไม่ได้ตั้ง URL ของ Cloudflare Worker ใน config.js');
+ const r=await fetch(window.BS70_API_URL,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({action,data}),cache:'no-store'});
+ let obj;try{obj=await r.json()}catch(e){throw Error('เชื่อมต่อ API ไม่สำเร็จ ตรวจที่อยู่ Worker')}
+ if(!obj.ok)throw Error(obj.error||'เกิดข้อผิดพลาดในการเชื่อมต่อ');
+ return obj.result;
+}
+function nav(page){for(const x of ['book','check']){$('tab-'+x).classList.toggle('hidden',page!==x);$('nav-'+x).classList.toggle('active',page===x)}msg('');}
+function openBooking(){ $('step1').classList.remove('hidden');$('step2').classList.add('hidden');$('success').classList.add('hidden'); }
+async function loadMap(){
+ try{msg(''); $('mapStatus').textContent='กำลังโหลดข้อมูลโต๊ะล่าสุด...'; publicState=await api('publicData'); const s=publicState.settings;
+ $('eventInfo').textContent=[s.date,s.time,s.place].filter(Boolean).join(' • ');
+ const after=s.aisleEnabled&&s.aisleAfter>=1&&s.aisleAfter<s.cols?s.aisleAfter:0;
+ const cols=Math.max(1,Number(s.cols)||12),rows=Math.max(Number(s.rows)||0,...publicState.tables.map(t=>+t.row||0),1);
+ const map=$('map');map.style.gridTemplateColumns=after?`repeat(${after},minmax(0,1fr)) minmax(14px,5vw) repeat(${cols-after},minmax(0,1fr))`:`repeat(${cols},minmax(0,1fr))`;
+ const index=new Map(publicState.tables.filter(t=>Number(t.col)>0).map(t=>[`${t.row}-${t.col}`,t]));
+ const aisleIndex=new Map(publicState.tables.filter(t=>Number(t.col)===0 && (t.status==='vip'||t.type==='SPECIAL')).map(t=>[Number(t.row),t]));
+ // Keep only selected tables still available.
+ const free=new Set(publicState.tables.filter(t=>(!t.status||t.status==='available') && t.type!=='SPECIAL'&&t.type!=='VIP').map(t=>String(t.no)));
+ for(const no of [...selected])if(!free.has(no))selected.delete(no);
+ map.replaceChildren();
+ for(let r=1;r<=rows;r++)for(let c=1;c<=cols;c++){
+  const t=index.get(`${r}-${c}`),el=document.createElement(t&&t.status!=='vip'?'button':'div');
+  if(t){const status=t.status||'available';el.className='seat '+(status==='vip'?'vip':selected.has(String(t.no))?'selected':status);
+   if(status==='vip'){el.textContent=t.label||'โต๊ะพิเศษ';el.title='โต๊ะพิเศษ ไม่เปิดจอง';}
+   else{const a=document.createElement('strong');a.textContent='T'+String(t.no); const b=document.createElement('small');b.textContent=t.group||t.batch||({available:'ว่าง',paid:'ชำระแล้ว',review:'รอตรวจ',pending:'รอชำระ'}[status]||'ว่าง');el.append(a,b);el.disabled=status!=='available'||s.bookingWindow?.status!=='open';el.onclick=()=>toggle(t.no);}
+  }
+  map.append(el);
+  if(after&&c===after){const a=document.createElement('div');const special=aisleIndex.get(r);a.className=special?'seat vip':'aisle';a.textContent=special?(special.label||'โต๊ะพิเศษ'):'ทางเดิน';map.append(a);}
+ }
+ const win=s.bookingWindow?.status||'closed';$('mapStatus').textContent=win==='open'?'เลือกโต๊ะสีเขียวได้หลายโต๊ะ และกดถัดไป':win==='upcoming'?'ยังไม่ถึงเวลาเปิดจอง':win==='ended'?'สิ้นสุดระยะเวลาจองแล้ว':'ระบบปิดรับจองในขณะนี้';
+ redrawSelected();
+ }catch(e){msg(e.message);$('mapStatus').textContent='โหลดผังไม่สำเร็จ';}
+}
+function toggle(no){const str=String(no);selected.has(str)?selected.delete(str):selected.add(str);loadMapFromLocal();}
+function loadMapFromLocal(){if(!publicState)return;document.querySelectorAll('.seat').forEach(x=>{if(!x.matches('button'))return;const no=x.querySelector('strong')?.textContent?.replace(/^T/,'');x.classList.toggle('selected',selected.has(no));});redrawSelected();}
+function redrawSelected(){const a=[...selected];$('selection').textContent=a.length?`เลือก ${a.length} โต๊ะ: ${a.map(x=>'T'+x).join(', ')}`:'ยังไม่ได้เลือกโต๊ะ';$('next').disabled=!a.length||publicState?.settings?.bookingWindow?.status!=='open';}
+function nextStep(){const picked=publicState.tables.filter(t=>selected.has(String(t.no)));$('summary').innerHTML=`<b>โต๊ะที่เลือก:</b> ${picked.map(t=>'T'+esc(t.no)).join(', ')}<div style="margin-top:6px"><b>ยอดรวม:</b> ${currency(picked.reduce((a,t)=>a+Number(t.price),0))} บาท</div>`;$('step1').classList.add('hidden');$('step2').classList.remove('hidden');window.scrollTo(0,0);}
+function backStep(){$('step2').classList.add('hidden');$('step1').classList.remove('hidden');window.scrollTo(0,0);}
+async function confirmBook(){if(submitted)return;const name=$('name').value.trim(),phone=$('phone').value.trim(),group=$('group').value.trim();if(name.length<3||!/^0\d{9}$/.test(phone)||!group){msg('กรุณากรอกชื่อผู้จอง เบอร์โทร 10 หลัก และชื่อโต๊ะให้ครบ');return;}submitted=true;$('confirm').disabled=true;
+ try{msg('');const result=await api('book',{name,phone,group,tables:[...selected]});$('step2').classList.add('hidden');const html=`<h2>✅ จองโต๊ะสำเร็จ</h2><p><b>เลขรายการจอง:</b> ${esc(result.bookingId)}</p><p><b>โต๊ะ:</b> ${result.tables.map(x=>'T'+esc(x)).join(', ')}</p><p><b>รวม:</b> ${currency(result.total)} บาท</p><p class="muted">สามารถแจ้งชำระเงินภายหลังโดยค้นหาด้วยเบอร์โทรศัพท์ที่จอง</p><button onclick="goPayment('${esc(phone)}')">ไปหน้าอัปโหลดสลิป →</button>`;$('success').innerHTML=html;$('success').classList.remove('hidden');selected.clear();window.scrollTo(0,0);
+ }catch(e){msg(e.message);await loadMap();backStep();}finally{submitted=false;$('confirm').disabled=false;}}
+function goPayment(phone){nav('check');$('lookupPhone').value=phone;lookup();}
+async function lookup(){try{msg('');const phone=$('lookupPhone').value.trim();if(!/^0\d{9}$/.test(phone))throw Error('กรุณาระบุเบอร์โทรศัพท์ 10 หลัก');$('bookingDetail').classList.add('hidden');currentBooking=null;
+ const items=await api('lookupPhone',{phone});$('found').replaceChildren();if(!items.length){$('found').textContent='ไม่พบรายการจอง';return;}
+ items.forEach(b=>{const div=document.createElement('div');div.className='bookingItem';const label=document.createElement('span');label.textContent=`${b.id} • โต๊ะ ${b.tables} • ${currency(b.total)} บาท • ${b.status}`;const btn=document.createElement('button');btn.textContent='ดูรายการ / ส่งสลิป';btn.onclick=()=>detail(b.id);div.append(label,document.createTextNode(' '),btn);$('found').append(div);});
+ }catch(e){msg(e.message);}}
+async function detail(id){try{msg('');const b=await api('getBooking',{phone:$('lookupPhone').value.trim(),id});currentBooking=b;$('bookingDetail').classList.remove('hidden');$('detail').innerHTML=`<div class="summary"><b>เลขจอง:</b> ${esc(b.id)}<p><b>ผู้จอง:</b> ${esc(b.name)}</p><p><b>ชื่อโต๊ะ:</b> ${esc(b.group)}</p><p><b>โต๊ะ:</b> ${b.tables.map(x=>'T'+esc(x)).join(', ')}</p><p><b>รวม:</b> ${currency(b.total)} บาท • <b>ชำระแล้ว:</b> ${currency(b.paid)} บาท</p></div>`;
+ $('bank').innerHTML=`<b>ชำระเงินไปยังบัญชี</b><p>${esc(b.bank?.name)} • ${esc(b.bank?.accountName)}</p><div><b>${esc(b.bank?.no)}</b> <button class="alt" onclick="copyBank()">คัดลอกเลขบัญชี</button></div>`;
+ const root=$('payTables');root.replaceChildren();let count=0;
+ b.tableDetails.forEach(t=>{const lb=document.createElement('label');const cb=document.createElement('input');cb.type='checkbox';cb.value=t.no;cb.disabled=['paid','review'].includes(t.status);if(!cb.disabled)count++;lb.append(cb,document.createTextNode(` T${t.no} — ${currency(t.price)} บาท (${t.status})`));root.append(lb);});
+ if(!count){const p=document.createElement('p');p.textContent='ไม่มีโต๊ะที่รอส่งสลิปในขณะนี้';root.append(p);}
+ if(b.payments?.length){const p=document.createElement('p');p.className='muted';p.textContent='สลิปที่ส่งแล้ว: '+b.payments.map(x=>`${x.id} (${x.status})`).join(', ');$('detail').append(p);}
+ }catch(e){msg(e.message);}}
+function copyBank(){if(currentBooking?.bank?.no)navigator.clipboard?.writeText(String(currentBooking.bank.no)).then(()=>msg('คัดลอกเลขบัญชีแล้ว','good')).catch(()=>msg('คัดลอกไม่ได้ กรุณากดเลือกเลขบัญชี'));}
+let uploading=false;
+async function sendSlip(){if(uploading)return;try{msg('');if(!currentBooking)throw Error('กรุณาค้นหารายการจองก่อน');const tables=[...$('payTables').querySelectorAll('input:checked')].map(x=>x.value);if(!tables.length)throw Error('กรุณาเลือกโต๊ะที่ต้องการชำระ');const f=$('slip').files[0];if(!f)throw Error('กรุณาเลือกรูปสลิป');if(!['image/jpeg','image/png','image/webp'].includes(f.type))throw Error('รองรับ JPG PNG WEBP เท่านั้น');if(f.size>5*1024*1024)throw Error('รูปสลิปต้องไม่เกิน 5 MB');uploading=true;
+ const base64=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(String(r.result).split(',')[1]);r.onerror=()=>rej(Error('อ่านไฟล์ไม่สำเร็จ'));r.readAsDataURL(f);});
+ const result=await api('uploadSlip',{id:currentBooking.id,phone:$('lookupPhone').value.trim(),tables,mime:f.type,base64});msg(`บันทึกสลิปสำเร็จ รหัส ${result.paymentId} รอเจ้าหน้าที่ตรวจสอบ`,'good');$('slip').value='';await detail(currentBooking.id);
+ }catch(e){msg(e.message);}finally{uploading=false;}}
+window.addEventListener('load',()=>loadMap());
+</script></body></html>
