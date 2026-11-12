@@ -1,10 +1,32 @@
 <!doctype html><html lang="th"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>จองโต๊ะคืนสู่เหย้า ชาวบางไทรวิทย์ 2570</title>
+<title>คืนสู่เหย้า 66 ปี บางไทรวิทยา</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{font-family:Sarabun,Tahoma,sans-serif;color:#17304f;background:#eff4fc}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{border:0;background:#194985;color:#fff;border-radius:11px;padding:11px 15px;font-weight:800;cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}.alt{background:#e5edfa;color:#194985}.wrap{max-width:1100px;margin:auto;padding:12px}.head{background:linear-gradient(120deg,#071c4b,#1c5296);color:white;border-bottom:5px solid #d2a448;padding:23px 15px;text-align:center}.head h1{font-size:clamp(21px,4vw,33px);color:#ffe4a0;margin:0}.head p{margin:5px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:13px 0}.tabs button{flex:1;background:white;color:#214477;border:1px solid #cbd7e9}.tabs button.active{background:#194985;color:white}.card{background:#fff;border:1px solid #dce6f3;border-radius:17px;padding:16px;margin:12px 0;box-shadow:0 7px 22px #1028470a}h2{margin:0 0 12px;font-size:20px}label{display:block;font-weight:800;margin:10px 0 4px}input{width:100%;border:1px solid #ccd7e6;border-radius:10px;padding:12px;min-width:0}.grid{display:grid;gap:8px}.cols2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.row{display:flex;justify-content:space-between;align-items:center;gap:9px;flex-wrap:wrap}.hidden{display:none!important}.muted{color:#61748c;font-size:13px}.notice{border-radius:14px;padding:14px;margin:10px 0;font-weight:800}.notice.blue{background:#dbebff;color:#103e7c;border:2px solid #8cb8f2}.notice.red{background:#fff0ed;color:#a1212d;border:2px solid #f3a7a7}.stage{background:#0b316f;color:white;text-align:center;padding:14px;border-radius:10px;margin:8px 0;font-weight:800}.musicians{display:flex;justify-content:center;gap:9px;margin-bottom:7px}.musicians span{border:1px solid #8dadd8;background:#dceaff;color:#204d83;border-radius:9px;padding:6px 8px;font-size:12px;font-weight:800}.mapOuter{overflow-x:auto}.map{display:grid;gap:4px;min-width:0}.seat{min-width:0;aspect-ratio:1/1.08;padding:2px 1px;border:1px solid #a3ccbc;background:#ebfaf2;color:#176045;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:clamp(8px,1.8vw,13px);font-weight:800}.seat small{display:block;max-width:100%;font-size:clamp(5px,1vw,10px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.seat.selected{background:#e0edff;color:#114ca5;border:2px solid #3479d4}.seat.pending,.seat.review{background:#fff0d6;color:#8f591c}.seat.paid{background:#e8ebef;color:#5b687a}.seat.vip{background:#fff0b7;color:#7a5510;border-color:#dab55a;overflow:hidden}.aisle{background:#e7edf7;border-left:1px dashed #9aacc5;border-right:1px dashed #9aacc5;border-radius:4px;display:grid;place-items:center;font-size:clamp(6px,1vw,10px);writing-mode:vertical-rl;color:#526a8b}.actions{display:flex;gap:10px;flex-wrap:wrap}.actions button{flex:1}.summary{background:#f2f7ff;padding:13px;border-radius:12px}.tag{display:inline-block;padding:3px 8px;background:#e6f0ff;border-radius:15px;margin:3px}.message{padding:12px;border-radius:12px;background:#fff3d6;color:#624a0a;margin:12px 0}.err{background:#ffeaeb;color:#951d2a}.good{background:#e1f8ea;color:#126c3a}.bookingItem{border-bottom:1px solid #e4eaf3;padding:12px 0}.tableChecks{display:flex;flex-wrap:wrap;gap:8px}.tableChecks label{background:#eff5ff;border:1px solid #b8cbea;padding:9px;border-radius:9px;margin:0}input[type=checkbox]{width:auto;margin-right:5px}.bank{background:#fff6dc;border-radius:10px;padding:12px;margin:10px 0}.footer{text-align:center;color:#657891;padding:25px 8px}@media(max-width:600px){.wrap{padding:8px}.card{padding:12px}.map{gap:2px}.seat{border-radius:4px}.musicians span{font-size:9px;padding:5px}}
+
+/* ป้ายนับถอยหลัง: แสดงกำหนดการ ไม่ใช้แทนสถานะเปิดจองจริงจากเซิร์ฟเวอร์ */
+.countdown-panel{max-width:1100px;margin:15px auto 4px;padding:17px 15px;border-radius:18px;background:linear-gradient(115deg,#092958,#1755a0);color:white;box-shadow:0 8px 22px #15345b25;text-align:center}
+.countdown-eyebrow{font-size:13px;letter-spacing:.02em;color:#e9d18d;font-weight:800}
+.countdown-title{font-size:clamp(17px,3.4vw,25px);font-weight:800;margin:4px 0 12px}
+.countdown-digits{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}
+.countdown-unit{min-width:66px;background:#ffffffed;color:#153f7b;border-radius:12px;padding:8px 12px;display:flex;flex-direction:column;align-items:center}
+.countdown-unit strong{font-size:clamp(23px,5vw,34px);font-variant-numeric:tabular-nums;line-height:1.2}
+.countdown-unit span{font-size:12px;font-weight:700}
+.countdown-foot{font-size:12px;color:#d9e5f6;margin-top:10px}
+@media(max-width:450px){.countdown-panel{margin:10px 8px 2px;padding:13px 9px}.countdown-digits{gap:5px}.countdown-unit{min-width:58px;padding:7px 8px}}
 </style></head><body>
 <header class="head"><h1>คืนสู่เหย้า ชาวบางไทรวิทย์ 2570</h1><p id="eventInfo">13 กุมภาพันธ์ 2570 • 17.30 น. • สนามกีฬาโรงเรียนบางไทรวิทยา</p></header>
+<section class="countdown-panel" aria-label="นับถอยหลังกิจกรรม" aria-live="off">
+<div class="countdown-eyebrow">🗓️ กำหนดการคืนสู่เหย้า 66 ปี บางไทรวิทยา</div>
+<div class="countdown-title" id="countdownTitle">กำลังคำนวณเวลานับถอยหลัง...</div>
+<div class="countdown-digits" role="timer" aria-label="เวลาคงเหลือ">
+<div class="countdown-unit"><strong id="cdDays">--</strong><span>วัน</span></div>
+<div class="countdown-unit"><strong id="cdHours">--</strong><span>ชั่วโมง</span></div>
+<div class="countdown-unit"><strong id="cdMinutes">--</strong><span>นาที</span></div>
+<div class="countdown-unit"><strong id="cdSeconds">--</strong><span>วินาที</span></div>
+</div>
+<div class="countdown-foot" id="countdownFoot">เวลาอ้างอิงประเทศไทย • กำหนดการจอง 1 ธ.ค. 2569 – 31 ม.ค. 2570</div>
+</section>
 <div class="wrap"><div class="notice blue">👥 10 ท่าน / โต๊ะ — นั่งร่วมงานได้โต๊ะละ 10 คน</div><div class="notice red">🚫🍺 ไม่มีเครื่องดื่มแอลกอฮอล์ภายในงาน</div>
 <div id="error" class="message err hidden" role="alert"></div><nav class="tabs"><button id="nav-book" class="active" onclick="nav('book')">🪑 จองโต๊ะ</button><button id="nav-check" onclick="nav('check')">📋 ตรวจสอบ / ส่งสลิป</button></nav>
 <section id="tab-book"><div id="step1"><div class="card"><div class="row"><h2>ขั้นตอนที่ 1 — เลือกโต๊ะ</h2><button class="alt" onclick="loadMap()">↻ รีเฟรชผัง</button></div><div class="muted" id="mapStatus">กำลังโหลดผังโต๊ะล่าสุด...</div><div class="musicians"><span>🎵 นักดนตรี 1</span><span>🎵 นักดนตรี 2</span><span>🎵 นักดนตรี 3</span></div><div class="stage">🎤 เวทีการแสดง</div><div class="mapOuter"><div id="map" class="map"></div></div><p class="muted">สีเขียว = ว่าง • สีน้ำเงิน = เลือกแล้ว • สีเหลือง = รอชำระ • สีเทา = ชำระแล้ว • สีทอง = โต๊ะพิเศษ</p></div><div class="card row"><strong id="selection">ยังไม่ได้เลือกโต๊ะ</strong><button id="next" onclick="nextStep()" disabled>ถัดไป →</button></div></div>
@@ -96,5 +118,44 @@ async function sendSlip(){if(uploading)return;try{msg('');if(!currentBooking)thr
  const base64=await new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(String(r.result).split(',')[1]);r.onerror=()=>rej(Error('อ่านไฟล์ไม่สำเร็จ'));r.readAsDataURL(f);});
  const result=await api('uploadSlip',{id:currentBooking.id,phone:$('lookupPhone').value.trim(),tables,mime:f.type,base64});msg(`บันทึกสลิปสำเร็จ รหัส ${result.paymentId} รอเจ้าหน้าที่ตรวจสอบ`,'good');$('slip').value='';stopBusy();await detail(currentBooking.id);alertSuccess('ส่งสลิปสำเร็จ','ระบบบันทึกสลิปแล้ว รอเจ้าหน้าที่ตรวจสอบเงินเข้าจริง');
  }catch(e){stopBusy();alertError(e);}finally{stopBusy();uploading=false;}}
+
+// กำหนดเวลาประเทศไทยตายตัว (+07:00) ไม่ขึ้นกับเขตเวลาของโทรศัพท์
+// วันปิดจอง 31 ม.ค. 2570 หมายถึงเปิดตามกำหนดจนถึง 23:59:59 น.
+const BS70_COUNTDOWN = Object.freeze({
+  bookingStart: Date.parse('2026-12-01T00:00:00+07:00'),
+  bookingEndExclusive: Date.parse('2027-02-01T00:00:00+07:00'),
+  eventStart: Date.parse('2027-02-13T17:30:00+07:00')
+});
+function updateCountdown(){
+  const now=Date.now();
+  let target,title,foot;
+  if(now<BS70_COUNTDOWN.bookingStart){
+    target=BS70_COUNTDOWN.bookingStart;title='⏳ อีกไม่นานเปิดจองโต๊ะ';
+    foot='เริ่มรับจอง 1 ธันวาคม 2569 • เวลา 00.00 น. (ประเทศไทย)';
+  }else if(now<BS70_COUNTDOWN.bookingEndExclusive){
+    target=BS70_COUNTDOWN.bookingEndExclusive;title='🎟️ เหลือเวลาตามกำหนดการจอง';
+    foot='สิ้นสุดกำหนดรับจอง 31 มกราคม 2570 • เวลา 23.59 น. (ประเทศไทย)';
+  }else if(now<BS70_COUNTDOWN.eventStart){
+    target=BS70_COUNTDOWN.eventStart;title='🎉 นับถอยหลังสู่วันคืนสู่เหย้า';
+    foot='วันเสาร์ที่ 13 กุมภาพันธ์ 2570 • เวลา 17.30 น.';
+  }else{
+    target=now;title='🎉 ถึงวันงานคืนสู่เหย้าแล้ว';
+    foot='13 กุมภาพันธ์ 2570 • โรงเรียนบางไทรวิทยา';
+  }
+  const remaining=Math.max(0,Math.ceil((target-now)/1000));
+  const days=Math.floor(remaining/86400),hours=Math.floor(remaining%86400/3600);
+  const minutes=Math.floor(remaining%3600/60),seconds=remaining%60;
+  $('cdDays').textContent=String(days);
+  $('cdHours').textContent=String(hours).padStart(2,'0');
+  $('cdMinutes').textContent=String(minutes).padStart(2,'0');
+  $('cdSeconds').textContent=String(seconds).padStart(2,'0');
+  $('countdownTitle').textContent=title;
+  // แยกกำหนดการจากสถานะเปิดจองจริงที่ควบคุมโดยแอดมิน
+  $('countdownFoot').textContent=foot+' • การเปิดรับจองจริงขึ้นอยู่กับการตั้งค่าระบบ';
+}
+updateCountdown();
+window.setInterval(updateCountdown,1000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)updateCountdown();});
+
 window.addEventListener('load',()=>loadMap());
 </script></body></html>
