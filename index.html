@@ -15,7 +15,7 @@
 .countdown-foot{font-size:12px;color:#d9e5f6;margin-top:10px}
 @media(max-width:450px){.countdown-panel{margin:10px 8px 2px;padding:13px 9px}.countdown-digits{gap:5px}.countdown-unit{min-width:58px;padding:7px 8px}}
 </style></head><body>
-<header class="head"><h1>คืนสู่เหย้า ชาวบางไทรวิทย์ 2570</h1><p id="eventInfo">13 กุมภาพันธ์ 2570 • 17.30 น. • สนามกีฬาโรงเรียนบางไทรวิทยา</p></header>
+<header class="head"><h1>คืนสู่เหย้า 66 ปี บางไทรวิทยา</h1><p id="eventInfo">13 กุมภาพันธ์ 2570 • 17.30 น. • สนามกีฬาโรงเรียนบางไทรวิทยา</p></header>
 <section class="countdown-panel" aria-label="นับถอยหลังกิจกรรม" aria-live="off">
 <div class="countdown-eyebrow">🗓️ กำหนดการคืนสู่เหย้า 66 ปี บางไทรวิทยา</div>
 <div class="countdown-title" id="countdownTitle">กำลังคำนวณเวลานับถอยหลัง...</div>
@@ -33,7 +33,7 @@
 <div id="step2" class="hidden"><div class="card"><h2>ขั้นตอนที่ 2 — ยืนยันรายละเอียด</h2><div id="summary" class="summary"></div><label for="name">ชื่อ–นามสกุลผู้จอง *</label><input id="name" autocomplete="name" maxlength="100"><label for="phone">เบอร์โทรศัพท์ 10 หลัก *</label><input id="phone" inputmode="tel" maxlength="10" autocomplete="tel" placeholder="08XXXXXXXX"><label for="group">ชื่อโต๊ะ * (ชื่อรุ่น / ชื่อกลุ่ม / ชื่อผู้จอง)</label><input id="group" maxlength="90" placeholder="เช่น รุ่น 2545 หรือ กลุ่มเพื่อนสมชาย"><div class="actions" style="margin-top:16px"><button class="alt" onclick="backStep()">← ย้อนกลับ</button><button id="confirm" onclick="confirmBook()">ยืนยันการจอง</button></div></div></div>
 <div id="success" class="card hidden"></div></section>
 <section id="tab-check" class="hidden"><div class="card"><h2>ค้นหารายการจอง</h2><label for="lookupPhone">เบอร์โทรศัพท์ที่ใช้จอง</label><div class="row"><input style="flex:1" id="lookupPhone" inputmode="tel" maxlength="10" placeholder="08XXXXXXXX"><button onclick="lookup()">ค้นหา</button></div><div id="found"></div></div><div class="card hidden" id="bookingDetail"><h2>รายละเอียดการจอง / แจ้งชำระเงิน</h2><div id="detail"></div><div class="bank" id="bank"></div><h3>เลือกโต๊ะที่ชำระด้วยสลิปนี้</h3><div id="payTables" class="tableChecks"></div><label for="slip">รูปสลิป JPG / PNG / WEBP (ไม่เกิน 5 MB)</label><input id="slip" type="file" accept="image/jpeg,image/png,image/webp"><div class="actions" style="margin-top:12px"><button onclick="sendSlip()">📤 ส่งสลิปให้เจ้าหน้าที่ตรวจ</button></div><p class="muted">รองรับชำระเป็นรายโต๊ะ การชำระจะมีผลหลังเจ้าหน้าที่อนุมัติเท่านั้น</p></div></section>
-<p class="footer">ระบบจองโต๊ะสมาคมศิษย์เก่าโรงเรียนบางไทรวิทยา — ข้อมูลใช้ร่วมกับ Google Apps Script</p></div>
+<p class="footer">ระบบจองโต๊ะจัดทำโดยโรงเรียนบางไทรวิทยา</p></div>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 <script src="config.js"></script><script>
 'use strict';
@@ -151,7 +151,7 @@ function updateCountdown(){
   $('cdSeconds').textContent=String(seconds).padStart(2,'0');
   $('countdownTitle').textContent=title;
   // แยกกำหนดการจากสถานะเปิดจองจริงที่ควบคุมโดยแอดมิน
-  $('countdownFoot').textContent=foot+' • การเปิดรับจองจริงขึ้นอยู่กับการตั้งค่าระบบ';
+  $('countdownFoot').textContent=foot+';
 }
 updateCountdown();
 window.setInterval(updateCountdown,1000);
